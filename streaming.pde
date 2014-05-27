@@ -54,7 +54,8 @@ void draw() {
   for (int i = 0; i < limit; i++) {
     for (int j = 0; j < limit; j++) {
 
-      fill(img.get(j, i));
+      color c = img.get(j, i);
+      fill(c);
 
       int x = Math.floor(j * width / limit);
       int y = Math.floor(i * height / limit);
