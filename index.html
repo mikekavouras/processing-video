@@ -14,8 +14,20 @@
   <video width="100%" height="100%" autoplay></video>
 
   <div class="tools">
+    <h2>Size</h2>
     <input type="range" name="points" id="range" min="10" max="80" step="1" value="20">
     <p id="count">20 x 20</p>
+    <h2>Shape</h2>
+    <input type="radio" checked name="shape" class="shape" data-shape="ellipse">
+    <label>ellipse</label>
+    <br>
+    <input type="radio" name="shape" class="shape" data-shape="rect">
+    <label>rect</label>
+    <br>
+    <input type="radio" name="shape" class="shape" data-shape="triangle">
+    <label>triangle</label>
+    <input type="radio" name="shape" class="shape" data-shape="experimental">
+    <label>expirement</label>
   </div>
 
   <canvas data-processing-sources="helpers.pde streaming.pde"></canvas>
