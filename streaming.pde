@@ -13,7 +13,8 @@ function initStream() {
   var error = function() {
     console.log('error');
   };
-  navigator.webkitGetUserMedia({video: true}, success, error);
+  navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia;
+  navigator.getUserMedia({video: true}, success, error);
 }
 
 var count = document.getElementById('count');
